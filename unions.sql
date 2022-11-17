@@ -4,6 +4,8 @@ EmployeeDemographics.EmployeeID = WareHouseEmployeeDemographics.EmployeeID;
 
 
 -- when we try to combine two tables having similar column name using joins, it wouldn't work because we cannot get joined values in a same column.
+-- (or)
+-- joins does not work while joining two different tables containing same column names into a common column in the resultant table
 -- that's where a union comes into play.
 
 -- union takes out all duplicates, it's kinda like a distinct statment.

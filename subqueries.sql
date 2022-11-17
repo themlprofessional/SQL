@@ -37,7 +37,7 @@ from (select EmployeeID, Salary, avg(salary) over() as AllAvgSalary
     from EmployeeSalary) a
 
 
--- Subquery in Where
+-- Subquery in Where (In Subquery the columns mentioned in select statement must be either used in group by or an aggregate function)
 -- for this EmployeeSalary table only return the employees if they are over the age of 30.
 -- But in the EmployeeSalary table there is no Age column, that is in the EmployeeDemographics table.
 -- Now if we wanted we could join that table and get that information or we could use a subquery

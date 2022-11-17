@@ -1,0 +1,42 @@
+Window Function Syntax
+
+select column1, column2,
+window_function() over(
+	partition by column1
+	order by column2) alias
+from table;
+
+----------------------------
+CTE's (Cross Tabl Expressions)
+
+with CTE_Name (
+select column_name
+from table_name
+where condition
+)
+
+select column_name
+from table_name
+where column_name
+in CTE_Name
+----------------------------
+Case When Statement
+
+select columnn_name
+case
+	when condition1 then result1
+	when condition2 then result2
+	else result3
+	end as column_name
+end
+----------------------------
+Joins
+
+select column1, column2
+from table1 tb1
+join table2 tb2
+on tb1.column1 = tb2.column2
+where condition;
+----------------------------
+
+
