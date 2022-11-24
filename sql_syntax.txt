@@ -1,11 +1,30 @@
+Order of writing SQL Query
+
+select *
+from <condition>
+where <condition>
+group by <condition>
+having <condition>
+order by <condition>
+limit
+----------------------------
+SQL Order of Execution
+
+from
+where
+group by
+having
+select
+order by
+limit
+----------------------------
 Window Function Syntax
 
 select column1, column2,
 window_function() over(
 	partition by column1
 	order by column2) alias
-from table;
-
+from table_name;
 ----------------------------
 CTE's (Cross Tabl Expressions)
 
