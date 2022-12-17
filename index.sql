@@ -5,8 +5,10 @@
 -- Reason - Index can help to speed up the retrieval of data
 
 -- Syntax
+/*
 create index index_name
 on table_name (column1, column2, ...);
+*/
 
 create index patient_names_ages
 on patients (name, age);
@@ -23,7 +25,7 @@ drop index name_index
 
 -- create index using alter command
 alter table employee
-add index(ename);
+add index "ename";
 
--- show current inices
+-- show current indexes
 show index from employee;

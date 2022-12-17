@@ -1,0 +1,9 @@
+-- Primary Key
+-- Unique Key
+-- Foreign Key
+-- Candidate Key
+-- Alternate Key
+-- Composite Key/Compound Key
+-- Super Key
+-- Alternate Key
+-- Surrogate Key

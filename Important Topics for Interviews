@@ -1,0 +1,23 @@
+-- From Priyanka who attended amazon and uber interviews
+1) Window Functions - rank(), dense_rank(), row_number(), lead() and lag()
+2) They will alo ask definitions like
+    a) What is DDL and DML
+    b) Difference between delete and truncate command
+    c) Difference between having and where
+3) Aggregate Functions
+4) Joins
+6) Keys (3 Keys)
+    a) Primary Key
+    b) Foreign key
+    c) Unique Key
+7) What is group by and partition by commnds and where you will use?
+8) Indexes
+
+-- General Imporatnt Topics
+1) Difference between Primary key and unique constraint?
+Difference 1:
+Only one primary key is allowed to be used in a table
+Multiple unique keys are allowed in a table.
+Difference 2:
+NULL value are not allowed in case of a Primary key
+NULL values are allowed in case of a unique key
