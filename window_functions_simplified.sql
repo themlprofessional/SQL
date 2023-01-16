@@ -12,6 +12,11 @@ VALUES (1, 'John Smith', 50000, 'IT'),
        (4, 'David Lee', 65000, 'HR'),
        (5, 'Sarah Patel', 70000, 'IT');
 
+
+
+
+
+
 -- 1. RANK, DENSE_RANK, ROW_NUMBER, NTILE
 SELECT Employee_ID, Employee_Name, Salary, Department,
 RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Rank",
@@ -20,6 +25,11 @@ ROW_NUMBER() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Row Number"
 NTILE(2) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Quartile"
 FROM Employee
 ORDER BY Department, Salary DESC;
+
+
+
+
+
 
 -- 2. LAG, LEAD, FIRST_VALUE, LAST_VALUE, NTH_VALUE
 SELECT Employee_ID, Employee_Name, Salary, Department,
@@ -31,6 +41,10 @@ NTH_VALUE(Salary, 2) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Sec
 FROM Employee
 ORDER BY Department, Salary DESC;
 
+
+
+
+
 -- 3. SUM, AVG, COUNT, MAX, MIN
 SELECT Employee_ID, Employee_Name, Salary, Department,
 SUM(Salary) OVER (PARTITION BY Department) AS "Department Total Salary",
@@ -41,12 +55,19 @@ MIN(Salary) OVER (PARTITION BY Department) AS "Department Minimum Salary"
 FROM Employee
 ORDER BY Department, Salary DESC;
 
+
+
+
+
 -- 4. CUME_DIST, PERCENT_RANK
 SELECT Employee_ID, Employee_Name, Salary, Department,
 CUME_DIST() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Cumulative Distribution",
 PERCENT_RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Percentile Rank"
 FROM Employee
 ORDER BY Department, Salary DESC;
+
+
+
 
 
 -- 5. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
@@ -68,6 +89,8 @@ ORDER BY Department, Salary;
 
 -- This query calculates the running total of salary for each employee within their department, but starting from the current row, unlike the previous query that starts from the first row in the table. 
 -- The ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING clause specifies that the window frame for the SUM function should include all rows from the current row to the end of the partition.
+
+
 
 
 
