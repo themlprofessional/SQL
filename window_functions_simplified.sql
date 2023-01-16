@@ -49,6 +49,34 @@ FROM Employee
 ORDER BY Department, Salary DESC;
 
 
+-- 5. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+SELECT Employee_ID, Employee_Name, Salary, Department,
+SUM(Salary) OVER (PARTITION BY Department ORDER BY Salary ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS "Running Total"
+FROM Employee
+ORDER BY Department, Salary;
+
+-- It also returns the running total of salary for each employee within their department but it is based on the range of the salary
+-- It is important to note that the result of these queries may vary depending on the data on the table and the specific requirements of the question. 
+-- You can use these clauses for other window functions as well based on the question requirements.
+
+
+-- ROWS BETWEEN UNBOUNDED FOLLOWING AND CURRENT ROW
+SELECT Employee_ID, Employee_Name, Salary, Department,
+SUM(Salary) OVER (PARTITION BY Department ORDER BY Salary ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS "Running Total"
+FROM Employee
+ORDER BY Department, Salary;
+
+-- This query calculates the running total of salary for each employee within their department, but starting from the current row, unlike the previous query that starts from the first row in the table. 
+-- The ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING clause specifies that the window frame for the SUM function should include all rows from the current row to the end of the partition.
 
 
 
+-- 6. ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING 
+SELECT Employee_ID, Employee_Name, Salary, Department,
+AVG(Salary) OVER (PARTITION BY Department ORDER BY Salary ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS "Average Salary"
+FROM Employee
+ORDER BY Department, Salary;
+
+-- This query calculates the average salary for each employee based on their immediate previous and next rows within the same department, ignoring the rest of the rows. The ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING clause specifies that the window frame for the AVG function should include the current row, the previous row, and the next row.
+-- It is important to note that the result of this query may vary depending on the data on the table and the specific requirements of the question. You can use this clause for other window functions as well based on the question requirements.
+-- You can also use ROWS BETWEEN 1 FOLLOWING AND 1 PRECEDING or RANGE BETWEEN 1 PRECEDING AND 1 FOLLOWING based on the requirements of the question.
