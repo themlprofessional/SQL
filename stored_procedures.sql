@@ -107,4 +107,10 @@ END
 EXEC GetTop3Employees
 
 -- stored procedure that retrieves employee records between two specified dates:
+CREATE PROCEDURE GetEmployeesByDate (@StartDate DATE, @EndDate DATE)
+AS
+BEGIN
+    SELECT * FROM Employee WHERE HireDate BETWEEN @StartDate AND @EndDate
+END
+
 EXEC GetEmployeesByDate @StartDate = '2022-01-01', @EndDate = '2022-03-31'
