@@ -30,13 +30,12 @@ ORDER BY Department, Salary DESC;
 
 
 
-
 -- 2. LAG, LEAD, FIRST_VALUE, LAST_VALUE, NTH_VALUE
 SELECT Employee_ID, Employee_Name, Salary, Department,
 LAG(Salary, 1) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Previous Salary",
 LEAD(Salary, 1) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Next Salary",
 FIRST_VALUE(Salary) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "First Salary",
-LAST_VALUE(Salary) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Last Salary",
+LAST_VALUE(Salary) OVER (PARTITION BY Department ORDER BY Salary DESC RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "Last Salary",
 NTH_VALUE(Salary, 2) OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Second Highest Salary"
 FROM Employee
 ORDER BY Department, Salary DESC;
