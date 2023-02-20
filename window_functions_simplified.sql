@@ -65,6 +65,13 @@ PERCENT_RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Percentil
 FROM Employee
 ORDER BY Department, Salary DESC;
 
+-- CUME_DIST and PERCENT_RANK -> These functions calculate the relative position of a value within a group of values.
+
+-- CUME_DIST and PERCENT_RANK -> These functions calculate the relative position of a value within a group of values.
+-- This query selects some columns from employee table and orders them by Department and Salary.
+-- For each row it calculates the CUME_DIST and PERCENT_RANK based on the partition by Department and order by Salary DESC.
+-- This means for each department, it ranks the employees by their salary in descending order and shows their cumulative distribution and percentile rank.
+
 
 
 
