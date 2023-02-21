@@ -85,6 +85,7 @@ ORDER BY Department, Salary;
 -- You can use these clauses for other window functions as well based on the question requirements.
 
 
+-- done ✅
 -- ROWS BETWEEN UNBOUNDED FOLLOWING AND CURRENT ROW
 SELECT Employee_ID, Employee_Name, Salary, Department,
 SUM(Salary) OVER (PARTITION BY Department ORDER BY Salary ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS "Running Total"
