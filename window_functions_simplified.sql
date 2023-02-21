@@ -58,6 +58,7 @@ ORDER BY Department, Salary DESC;
 
 
 
+-- done ✅
 -- 4. CUME_DIST, PERCENT_RANK
 SELECT Employee_ID, Employee_Name, Salary, Department,
 CUME_DIST() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Cumulative Distribution",
