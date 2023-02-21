@@ -98,7 +98,7 @@ ORDER BY Department, Salary;
 
 
 
-
+-- done ✅
 -- 6. ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING 
 SELECT Employee_ID, Employee_Name, Salary, Department,
 AVG(Salary) OVER (PARTITION BY Department ORDER BY Salary ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS "Average Salary"
