@@ -74,6 +74,7 @@ ORDER BY Department, Salary DESC;
 
 
 
+-- done ✅
 -- 5. ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
 SELECT Employee_ID, Employee_Name, Salary, Department,
 SUM(Salary) OVER (PARTITION BY Department ORDER BY Salary ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS "Running Total"
