@@ -28,7 +28,7 @@ ORDER BY Department, Salary DESC;
 -- row_number() -> It assigns a sequential number to each row within it's partition.
 -- rank() -> It assigns a rank to each row within its partition based on Salary.
           -> Rows with same value recieve a same rank.
-	       -> If two sequential rows have same rank, the upcomming row will not have the next rank number, it will skip it and continue from the next-next rank.
+	  -> If two sequential rows have same rank, the upcomming row will not have the next rank number, it will skip it and continue from the next-next rank.
 -- dense_rank() -> It does not skip the rank values unlike rank() function.
 -- ntile() -> It divides the rows into a specified number of groups with equal number of rows in each group.
            -> The argument of ntile() specifies how many groups to create.
