@@ -60,6 +60,7 @@ ORDER BY Department, Salary DESC;
 
 
 
+-- done ✅
 -- 3. SUM, AVG, COUNT, MAX, MIN
 SELECT Employee_ID, Employee_Name, Salary, Department,
 SUM(Salary) OVER (PARTITION BY Department) AS "Department Total Salary",
