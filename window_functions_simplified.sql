@@ -17,6 +17,7 @@ VALUES (1, 'John Smith', 50000, 'IT'),
 
 
 
+-- done ✅
 -- 1. RANK, DENSE_RANK, ROW_NUMBER, NTILE
 SELECT Employee_ID, Employee_Name, Salary, Department,
 RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS "Rank",
