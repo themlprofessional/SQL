@@ -13,15 +13,15 @@ CREATE TABLE department (
   average_salary DECIMAL(10,2)
 );
 
+INSERT INTO department (department_id, department_name, average_salary)
+VALUES (1, 'IT', 55000),
+       (2, 'HR', 60000);
+       
 INSERT INTO employee (employee_id, employee_name, department_id, salary, manager_id)
 VALUES (1, 'John Smith', 1, 50000, 3),
        (2, 'Jane Doe', 2, 60000, 4),
        (3, 'Bob Johnson', 1, 70000, NULL),
        (4, 'Samantha Williams', 2, 55000, 3);
-
-INSERT INTO department (department_id, department_name, average_salary)
-VALUES (1, 'IT', 55000),
-       (2, 'HR', 60000);
 
 
 -- Types of Joins
