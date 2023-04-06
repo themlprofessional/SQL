@@ -25,3 +25,21 @@ Collection of SQL queries
 18. How to debug a query.
 19. How to speed up a query.
 20. Rank and dense rank
+
+
+Prepare these topics well!!
+
+📌 Basic SQL Commands - DDL, DML, DCL, DQL and TCL (SELECT, DELETE, UPDATE, TRUNCATE, DROP, CREATE, INSERT, REVOKE, GRANT, COMMIT, ROLLBACK, SAVEPOINT)
+📌 Aggregation Functions - SUM, MIN, MAX, AVG, PRODUCT, DIFFERENCE.
+📌 GROUP BY, PARTITION BY, WITH.
+📌 Common Table Expressions (CTE)
+📌 Joins (Don't ignore
+📌 Window Functions (RANK, DENSE_RANK, ROW_NUMBER, LEAD, LAG)
+📌 Date Time Functions
+📌 String Functions
+📌 CASE WHEN, SWITCH
+📌 Null Functions
+📌 Logical Functions
+📌 WHERE, HAVING, ORDER BY, LIMIT, OFFSET, FETCH.
+📌 UNION and UNION ALL.
+📌 Theoritical knowledge on Views, Stored Procedures, Functions (Good to have)
